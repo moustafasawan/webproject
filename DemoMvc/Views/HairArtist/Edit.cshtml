@@ -1,0 +1,25 @@
+﻿@model HairArtistViewModel
+@{
+    ViewData["Title"] = "Edit";
+   
+}
+
+<h1>Edit</h1>
+
+<div class="container">
+    <form asp-action="Edit" enctype="multipart/form-data">
+        <div class="form-group">
+            <label class="col-form-label" asp-for="name">Name</label>
+            <input class="form-control" asp-for="name" />
+            <p class="text-danger"> @Html.ValidationMessageFor(e=>e.name)</p>
+
+        </div>
+        <div class="form-group">
+            <label class="col-form-label" asp-for="Image">Image</label>
+            <input class="form-control" asp-for="Image" />
+            <p class="text-danger"> @Html.ValidationMessageFor(e=>e.Image)</p>
+        </div>
+        <input class="btn btn-outline-primary" value="Save Changes" type="submit" />
+    </form>
+</div>
+
